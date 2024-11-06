@@ -201,7 +201,9 @@ self.addEventListener('install', function(event) {
         caches.open('study-planner-cache').then(function(cache) {
             return cache.addAll([
                 './',
-                './index.html'
+                './index.html',
+                './styles.css',  // If you have external styles
+                './script.js'    // If you have external JavaScript
             ]);
         })
     );
@@ -214,5 +216,3 @@ self.addEventListener('fetch', function(event) {
         })
     );
 });
-
-
